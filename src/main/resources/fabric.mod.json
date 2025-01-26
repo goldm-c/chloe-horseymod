@@ -1,31 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "horseymod",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Chloe's Horseymod",
+	"description": "It adds steel and other things",
 	"authors": [
-		"Me!"
+		"Chloe Horsey"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://goldm.neocities.org",
+		"sources": "https://github.com/goldm_/"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.horseymod.Horseymod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.horseymod.HorseymodClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"horseymod.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "horseymod.client.mixins.json",
 			"environment": "client"
 		}
 	],
