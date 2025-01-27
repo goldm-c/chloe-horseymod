@@ -8,6 +8,8 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.OxidizableBlock;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -19,19 +21,19 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 	public static final Block STEEL_BLOCK = registerBlock("steel_block", 
-			new Block(AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK)
+			new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "steel_block")))
 					.mapColor(MapColor.IRON_GRAY)));
 	public static final Block EXPOSED_STEEL = registerBlock("exposed_steel", 
-			new Block(AbstractBlock.Settings.copy(Blocks.EXPOSED_COPPER)
+			new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.EXPOSED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "exposed_steel")))
 					.mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
 	public static final Block WEATHERED_STEEL = registerBlock("weathered_steel", 
-			new Block(AbstractBlock.Settings.copy(Blocks.WEATHERED_COPPER)
+			new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.WEATHERED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "weathered_steel")))
 					.mapColor(MapColor.TERRACOTTA_ORANGE)));
 	public static final Block RUSTED_STEEL = registerBlock("rusted_steel", 
-			new Block(AbstractBlock.Settings.copy(Blocks.OXIDIZED_COPPER)
+			new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.OXIDIZED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "rusted_steel")))
 					.mapColor(MapColor.TERRACOTTA_RED)));
 	

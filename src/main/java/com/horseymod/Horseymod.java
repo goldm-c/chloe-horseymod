@@ -26,5 +26,6 @@ public class Horseymod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModBlocks.registerOxidizationPairs();
 	}
 }
