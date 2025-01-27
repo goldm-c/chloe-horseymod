@@ -5,6 +5,9 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.horseymod.block.ModBlocks;
+import com.horseymod.item.ModItems;
+
 public class Horseymod implements ModInitializer {
 	public static final String MOD_ID = "horseymod";
 
@@ -20,5 +23,8 @@ public class Horseymod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("NEIGH!");
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
