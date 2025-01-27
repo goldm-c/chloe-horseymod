@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.example.mixin.client",
+	"package": "com.horseymod.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ExampleClientMixin"
+		"HorseymodClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
