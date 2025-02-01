@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "key": {
+    "#": "horseymod:woodchips",
+    "d": "minecraft:dirt"
+  },
+  "pattern": [
+    "###",
+    "#d#",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "horseymod:mulch"
+  }
+}

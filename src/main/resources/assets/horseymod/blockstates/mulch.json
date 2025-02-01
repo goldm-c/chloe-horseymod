@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"": [
+	  {
+        "model": "horseymod:block/mulch"
+      },
+      {
+        "model": "horseymod:block/mulch",
+        "y": 90
+      },
+      {
+        "model": "horseymod:block/mulch",
+        "y": 180
+      },
+      {
+        "model": "horseymod:block/mulch",
+        "y": 270
+      } ]
+	}
+}

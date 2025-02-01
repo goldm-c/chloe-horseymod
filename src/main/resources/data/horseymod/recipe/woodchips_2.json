@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": "#horseymod:cut_into_2_chips",
+    "result": {
+        "id": "horseymod:woodchips",
+        "count": 2
+    }
+}

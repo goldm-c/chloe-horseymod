@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"horseymod:steel_block",
+		"horseymod:exposed_steel",
+		"horseymod:weathered_steel",
+		"horseymod:rusted_steel"
+	]
+}

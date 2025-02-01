@@ -17,25 +17,30 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 	public static final Block STEEL_BLOCK = registerBlock("steel_block", 
 			new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "steel_block")))
-					.mapColor(MapColor.IRON_GRAY)));
+					.mapColor(MapColor.IRON_GRAY).strength(3.0F, 6.0F).requiresTool()));
 	public static final Block EXPOSED_STEEL = registerBlock("exposed_steel", 
 			new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, AbstractBlock.Settings.copy(Blocks.EXPOSED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "exposed_steel")))
-					.mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
+					.mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).requiresTool()));
 	public static final Block WEATHERED_STEEL = registerBlock("weathered_steel", 
 			new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, AbstractBlock.Settings.copy(Blocks.WEATHERED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "weathered_steel")))
-					.mapColor(MapColor.TERRACOTTA_ORANGE)));
+					.mapColor(MapColor.TERRACOTTA_ORANGE).strength(3.0F, 6.0F).requiresTool()));
 	public static final Block RUSTED_STEEL = registerBlock("rusted_steel", 
 			new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.OXIDIZED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "rusted_steel")))
-					.mapColor(MapColor.TERRACOTTA_RED)));
+					.mapColor(MapColor.TERRACOTTA_RED).strength(3.0F, 6.0F).requiresTool()));
+	public static final Block MULCH = registerBlock("mulch", 
+			new Block(AbstractBlock.Settings.create()
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "mulch")))
+			.mapColor(MapColor.OAK_TAN).strength(0.5F).sounds(BlockSoundGroup.CROP)));
 	
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);
@@ -57,9 +62,10 @@ public class ModBlocks {
 			entries.add(WEATHERED_STEEL);
 			entries.add(RUSTED_STEEL);
 		});
-	}
-	
-	public static void registerOxidizationPairs() {
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+			entries.add(MULCH);
+		});
+		
 		Horseymod.LOGGER.info("Registering Horseymod Oxidization Pairs");
 	    OxidizableBlocksRegistry.registerOxidizableBlockPair(STEEL_BLOCK, EXPOSED_STEEL);
 	    OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_STEEL, WEATHERED_STEEL);

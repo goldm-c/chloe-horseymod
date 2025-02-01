@@ -3,9 +3,17 @@
 	"block.horseymod.exposed_steel": "Exposed Steel",
 	"block.horseymod.weathered_steel": "Weathered Steel",
 	"block.horseymod.rusted_steel": "Rusted Steel",
+	"block.horseymod.mulch": "Mulch",
 	
 	"item.horseymod.steel_block": "Steel Block",
 	"item.horseymod.exposed_steel": "Exposed Steel",
 	"item.horseymod.weathered_steel": "Weathered Steel",
-	"item.horseymod.rusted_steel": "Rusted Steel"
+	"item.horseymod.rusted_steel": "Rusted Steel",
+	"item.horseymod.mulch": "Mulch",
+	
+	"item.horseymod.woodchips": "Woodchips",
+	
+	"tag.item.horseymod.cut_into_1_woodchip": "Small wooden items",
+	"tag.item.horseymod.cut_into_2_woodchips": "Wooden items",
+	"tag.item.horseymod.cut_into_8_woodchips": "Logs and boats"
 }

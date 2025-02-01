@@ -1,0 +1,33 @@
+{
+	"values": [
+		"#minecraft:planks",
+		"#minecraft:wooden_stairs",
+		"#minecraft:wooden_fences",
+		"#minecraft:fence_gates",
+		"#minecraft:wooden_pressure_plates",
+		"#minecraft:signs",
+		"#minecraft:hanging_signs",
+		"#minecraft:wooden_trapdoors",
+		"minecraft:wooden_axe",
+		"minecraft:wooden_hoe",
+		"minecraft:wooden_pickaxe",
+		"minecraft:wooden_shovel",
+		"minecraft:wooden_sword",
+		"minecraft:bow",
+		"minecraft:crafting_table",
+		"minecraft:fletching_table",
+		"minecraft:cartography_table",
+		"minecraft:smithing_table",
+		"minecraft:loom",
+		"minecraft:note_block",
+		"minecraft:jukebox",
+		"minecraft:bookshelf",
+		"minecraft:lectern",
+		"minecraft:composter",
+		"minecraft:chest",
+		"minecraft:barrel",
+		"minecraft:chiseled_bookshelf",
+		"minecraft:beehive",
+		"minecraft:mangrove_roots"
+	]
+}
