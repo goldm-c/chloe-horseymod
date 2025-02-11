@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "horseymod:block/cattails_bottom"
+  }
+}

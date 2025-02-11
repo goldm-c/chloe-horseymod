@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "horseymod:mulch"
+          "name": "horseymod:willow_log"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "horseymod:blocks/mulch"
+  "random_sequence": "horseymod:blocks/willow_log"
 }

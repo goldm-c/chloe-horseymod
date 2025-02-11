@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "horseymod:block/cattails_bottom"
+    },
+    "half=upper": {
+      "model": "horseymod:block/cattails_top"
+    }
+  }
+}

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "horseymod:mulch"
+          "name": "horseymod:weathered_steel"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "horseymod:blocks/mulch"
+  "random_sequence": "horseymod:blocks/steel_block"
 }

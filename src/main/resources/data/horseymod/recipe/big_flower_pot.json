@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "key": {
+    "#": "minecraft:dirt",
+    "B": "minecraft:brick"
+  },
+  "pattern": [
+    "B B",
+    "B#B",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "horseymod:big_flower_pot"
+  }
+}

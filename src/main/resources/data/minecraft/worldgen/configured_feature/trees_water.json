@@ -1,0 +1,13 @@
+{
+  "replace": true,
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "horseymod:willow",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": "horseymod:willow"
+      }
+    ]
+  }
+}

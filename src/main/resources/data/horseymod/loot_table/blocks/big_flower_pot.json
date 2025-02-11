@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "horseymod:mulch"
+          "name": "horseymod:big_flower_pot"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "horseymod:blocks/mulch"
+  "random_sequence": "horseymod:blocks/big_flower_pot"
 }

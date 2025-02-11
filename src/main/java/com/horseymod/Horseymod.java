@@ -1,6 +1,7 @@
 package com.horseymod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,5 +27,12 @@ public class Horseymod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		
+		FuelRegistryEvents.BUILD.register((builder, context) -> {
+			builder.add(ModBlocks.CATTAILS, 100); 
+			});
+		
+		
+
 	}
 }

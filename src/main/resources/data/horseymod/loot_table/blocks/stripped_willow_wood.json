@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "horseymod:mulch"
+          "name": "horseymod:stripped_willow_wood"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "horseymod:blocks/mulch"
+  "random_sequence": "horseymod:blocks/stripped_willow_wood"
 }

@@ -1,0 +1,6 @@
+{
+	"model": {
+     	"type": "minecraft:model",
+     	"model": "horseymod:block/willow_planks" 
+     }
+}
