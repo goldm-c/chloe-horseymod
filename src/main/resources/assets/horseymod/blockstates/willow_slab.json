@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "horseymod:block/willow_slab"
+    },
+    "type=double": {
+      "model": "horseymod:block/willow_planks"
+    },
+    "type=top": {
+      "model": "horseymod:block/willow_slab_top"
+    }
+  }
+}

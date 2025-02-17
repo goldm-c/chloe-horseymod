@@ -5,6 +5,13 @@
 		"horseymod:stripped_willow_log",
 		"horseymod:willow_wood",
 		"horseymod:natural_willow_wood",
-		"horseymod:stripped_willow_wood"
+		"horseymod:stripped_willow_wood",
+		"horseymod:willow_planks",
+		"horseymod:willow_slab",
+		"horseymod:willow_stairs",
+		"horseymod:willow_fence",
+		"horseymod:willow_fence_gate",
+		"horseymod:willow_button",
+		"horseymod:willow_pressure_plate"
 	]
 }

@@ -9,13 +9,21 @@ import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ButtonBlock;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.OxidizableBlock;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.block.TallFlowerBlock;
+import net.minecraft.block.WoodType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.block.Oxidizable;
@@ -83,6 +91,25 @@ public class ModBlocks {
 			new SaplingBlock(ModSaplingGenerators.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
 				.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_sapling")))));
 	
+	public static final Block WILLOW_STAIRS = registerBlock("willow_stairs",
+            new StairsBlock(ModBlocks.WILLOW_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.copy(WILLOW_PLANKS).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_stairs")))));
+    public static final Block WILLOW_SLAB = registerBlock("willow_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(WILLOW_PLANKS).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_slab")))));
+    public static final Block WILLOW_FENCE = registerBlock("willow_fence",
+            new FenceBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_fence")))
+            		.mapColor(WILLOW_PLANKS.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).burnable()));
+    public static final Block WILLOW_FENCE_GATE = registerBlock("willow_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_fence_gate")))
+            		.mapColor(WILLOW_PLANKS.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).burnable()));
+    public static final Block WILLOW_BUTTON = registerBlock("willow_button",
+            new ButtonBlock(BlockSetType.ACACIA, 30, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_button")))
+            		.noCollision().strength(0.5F).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate",
+            new PressurePlateBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_pressure_plate")))
+            		.mapColor(WILLOW_PLANKS.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(0.5F)
+        			.burnable().pistonBehavior(PistonBehavior.DESTROY)));
+    
 	public static final Block BIG_FLOWER_POT = registerBlock("big_flower_pot", 
 			new Block(AbstractBlock.Settings.create()
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_planks")))
@@ -92,13 +119,8 @@ public class ModBlocks {
 			new TallWaterFlowerBlock(
 			AbstractBlock.Settings.create()
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "cattails")))
-				.mapColor(MapColor.DARK_GREEN)
-				.noCollision()
-				.breakInstantly()
-				.sounds(BlockSoundGroup.GRASS)
-				.offset(AbstractBlock.OffsetType.XZ)
-				.burnable()
-				.pistonBehavior(PistonBehavior.DESTROY)));
+				.mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.WET_GRASS).offset(AbstractBlock.OffsetType.XZ)
+				.burnable().pistonBehavior(PistonBehavior.DESTROY)));
 	
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);
@@ -138,6 +160,13 @@ public class ModBlocks {
 			entries.add(WILLOW_WOOD);
 			entries.add(STRIPPED_WILLOW_LOG);
 			entries.add(STRIPPED_WILLOW_WOOD);
+			entries.add(WILLOW_PLANKS);
+			entries.add(WILLOW_SLAB);
+			entries.add(WILLOW_STAIRS);
+			entries.add(WILLOW_FENCE);
+			entries.add(WILLOW_FENCE_GATE);
+			entries.add(WILLOW_BUTTON);
+			entries.add(WILLOW_PRESSURE_PLATE);
 			entries.add(BIG_FLOWER_POT);
 			entries.add(STEEL_BLOCK);
 			entries.add(EXPOSED_STEEL);
@@ -159,6 +188,12 @@ public class ModBlocks {
 	    FlammableBlockRegistry.getDefaultInstance().add(STRIPPED_WILLOW_LOG, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(STRIPPED_WILLOW_WOOD, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_PLANKS, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_SLAB, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_STAIRS, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_FENCE, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_FENCE_GATE, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_BUTTON, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_PRESSURE_PLATE, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_LEAVES, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_VINES, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_SAPLING, 5, 5);

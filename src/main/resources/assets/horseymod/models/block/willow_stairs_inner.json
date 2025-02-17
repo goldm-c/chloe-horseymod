@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "horseymod:block/willow_planks",
+    "side": "horseymod:block/willow_planks",
+    "top": "horseymod:block/willow_planks"
+  }
+}

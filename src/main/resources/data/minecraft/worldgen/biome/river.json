@@ -1,36 +1,23 @@
 {
   "replace": true,
-  "carvers": [
+    "carvers": [
     "minecraft:cave",
     "minecraft:cave_extra_underground",
     "minecraft:canyon"
   ],
-  "downfall": 0.9,
+  "downfall": 0.5,
   "effects": {
     "fog_color": 12638463,
-    "foliage_color": 5011004,
-    "grass_color_modifier": "swamp",
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000
     },
-    "music": [
-      {
-        "data": {
-          "max_delay": 24000,
-          "min_delay": 12000,
-          "replace_current_music": false,
-          "sound": "minecraft:music.overworld.swamp"
-        },
-        "weight": 1
-      }
-    ],
     "music_volume": 1.0,
-    "sky_color": 7907327,
-    "water_color": 5006681,
-    "water_fog_color": 5006681
+    "sky_color": 8103167,
+    "water_color": 4159204,
+    "water_fog_color": 329011
   },
   "features": [
     [],
@@ -42,8 +29,6 @@
       "minecraft:amethyst_geode"
     ],
     [
-      "minecraft:fossil_upper",
-      "minecraft:fossil_lower",
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
@@ -76,8 +61,9 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
+      "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "horseymod:disk_mud"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -86,20 +72,15 @@
     ],
     [
       "minecraft:glow_lichen",
-      "horseymod:willow_swamp_land",
-      "horseymod:willow_swamp_water",
-      "minecraft:trees_swamp",
-      "minecraft:flower_swamp",
+      "minecraft:trees_water",
       "horseymod:patch_cattails",
-      "minecraft:patch_grass_normal",
-      "minecraft:patch_waterlily",
-      "minecraft:brown_mushroom_swamp",
-      "minecraft:red_mushroom_swamp",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane_swamp",
+      "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "minecraft:seagrass_swamp"
+      "minecraft:seagrass_river"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -117,38 +98,7 @@
       }
     ],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:frog",
-        "maxCount": 5,
-        "minCount": 2,
-        "weight": 10
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [
       {
@@ -173,7 +123,7 @@
         "type": "minecraft:skeleton",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 70
+        "weight": 100
       },
       {
         "type": "minecraft:creeper",
@@ -200,16 +150,10 @@
         "weight": 5
       },
       {
-        "type": "minecraft:slime",
+        "type": "minecraft:drowned",
         "maxCount": 1,
         "minCount": 1,
-        "weight": 1
-      },
-      {
-        "type": "minecraft:bogged",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 30
+        "weight": 100
       }
     ],
     "underground_water_creature": [
@@ -220,8 +164,22 @@
         "weight": 10
       }
     ],
-    "water_ambient": [],
-    "water_creature": []
+    "water_ambient": [
+      {
+        "type": "minecraft:salmon",
+        "maxCount": 5,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 2
+      }
+    ]
   },
-  "temperature": 0.8
+  "temperature": 0.5
 }
