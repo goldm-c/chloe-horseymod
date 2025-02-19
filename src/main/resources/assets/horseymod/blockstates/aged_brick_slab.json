@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "horseymod:block/aged_brick_slab"
+    },
+    "type=double": {
+      "model": "horseymod:block/aged_brick_planks"
+    },
+    "type=top": {
+      "model": "horseymod:block/aged_brick_slab_top"
+    }
+  }
+}

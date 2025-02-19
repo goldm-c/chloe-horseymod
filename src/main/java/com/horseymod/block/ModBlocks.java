@@ -57,6 +57,16 @@ public class ModBlocks {
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "rusted_steel")))
 					.mapColor(MapColor.TERRACOTTA_RED).strength(3.0F, 6.0F).requiresTool()));
 	
+	public static final Block AGED_BRICKS = registerBlock("aged_bricks", 
+			new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "aged_bricks")))
+			.sounds(BlockSoundGroup.NETHER_BRICKS)));
+	public static final Block AGED_BRICK_STAIRS = registerBlock("aged_brick_stairs",
+            new StairsBlock(ModBlocks.AGED_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.copy(AGED_BRICKS).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "aged_brick_stairs")))));
+    public static final Block AGED_BRICK_SLAB = registerBlock("aged_brick_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(AGED_BRICKS).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "aged_brick_slab")))));
+	
 	public static final Block MULCH = registerBlock("mulch", 
 			new Block(AbstractBlock.Settings.create()
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "mulch")))
@@ -182,6 +192,9 @@ public class ModBlocks {
 			entries.add(WILLOW_FENCE_GATE);
 			entries.add(WILLOW_BUTTON);
 			entries.add(WILLOW_PRESSURE_PLATE);
+			entries.add(AGED_BRICKS);
+			entries.add(AGED_BRICK_STAIRS);
+			entries.add(AGED_BRICK_SLAB);
 			entries.add(BIG_FLOWER_POT);
 			entries.add(STEEL_BLOCK);
 			entries.add(EXPOSED_STEEL);

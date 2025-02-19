@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.horseymod.block.ModBlocks;
-import com.horseymod.entity.ModBoats;
 import com.horseymod.item.ModItems;
 
 public class Horseymod implements ModInitializer {

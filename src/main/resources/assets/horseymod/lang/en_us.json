@@ -1,4 +1,7 @@
 {
+	"block.horseymod.aged_bricks": "Aged Bricks",
+	"block.horseymod.aged_brick_slab": "Aged Brick Slab",
+	"block.horseymod.aged_brick_stairs": "Aged Brick Stairs",
 	"block.horseymod.big_flower_pot": "Big Flower Pot",
 	"block.horseymod.steel_block": "Steel Block",
 	"block.horseymod.exposed_steel": "Exposed Steel",
@@ -23,6 +26,9 @@
 	"block.horseymod.willow_sapling": "Willow Sapling",
 	"block.horseymod.cattails": "Cattails",
 	
+	"item.horseymod.aged_bricks": "Aged Bricks",
+	"item.horseymod.aged_brick_slab": "Aged Brick Slab",
+	"item.horseymod.aged_brick_stairs": "Aged Brick Stairs",
 	"item.horseymod.big_flower_pot": "Big Flower Pot",
 	"item.horseymod.steel_block": "Steel Block",
 	"item.horseymod.exposed_steel": "Exposed Steel",

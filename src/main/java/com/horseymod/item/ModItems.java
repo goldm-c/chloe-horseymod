@@ -31,6 +31,10 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
 			entries.add(WOODCHIPS);
 		});	
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+			entries.add(WILLOW_BOAT);
+			entries.add(WILLOW_CHEST_BOAT);
+		});	
 		
 		CompostingChanceRegistry.INSTANCE.add(ModItems.WOODCHIPS, 0.3f);
 		

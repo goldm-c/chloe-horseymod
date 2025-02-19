@@ -5,6 +5,9 @@
 		"horseymod:exposed_steel",
 		"horseymod:weathered_steel",
 		"horseymod:rusted_steel",
-		"horseymod:big_flower_pot"
+		"horseymod:big_flower_pot",
+		"horseymod:aged_bricks",
+		"horseymod:aged_bricks_slab",
+		"horseymod:aged_bricks_stairs"
 	]
 }
