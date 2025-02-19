@@ -56,6 +56,18 @@ public class ModBlocks {
 			new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, AbstractBlock.Settings.copy(Blocks.OXIDIZED_COPPER)
 					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "rusted_steel")))
 					.mapColor(MapColor.TERRACOTTA_RED).strength(3.0F, 6.0F).requiresTool()));
+	public static final Block WAXED_STEEL_BLOCK = registerBlock("waxed_steel_block", 
+			new Block(AbstractBlock.Settings.copy(ModBlocks.STEEL_BLOCK)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "waxed_steel_block")))));
+	public static final Block WAXED_EXPOSED_STEEL = registerBlock("waxed_exposed_steel", 
+			new Block(AbstractBlock.Settings.copy(ModBlocks.EXPOSED_STEEL)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "waxed_exposed_steel")))));
+	public static final Block WAXED_WEATHERED_STEEL = registerBlock("waxed_weathered_steel", 
+			new Block(AbstractBlock.Settings.copy(ModBlocks.WEATHERED_STEEL)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "waxed_weathered_steel")))));
+	public static final Block WAXED_RUSTED_STEEL = registerBlock("waxed_rusted_steel", 
+			new Block(AbstractBlock.Settings.copy(ModBlocks.RUSTED_STEEL)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "waxed_rusted_steel")))));
 	
 	public static final Block AGED_BRICKS = registerBlock("aged_bricks", 
 			new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)
@@ -200,6 +212,10 @@ public class ModBlocks {
 			entries.add(EXPOSED_STEEL);
 			entries.add(WEATHERED_STEEL);
 			entries.add(RUSTED_STEEL);
+			entries.add(WAXED_STEEL_BLOCK);
+			entries.add(WAXED_EXPOSED_STEEL);
+			entries.add(WAXED_WEATHERED_STEEL);
+			entries.add(WAXED_RUSTED_STEEL);
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
 			entries.add(MULCH);
@@ -233,6 +249,11 @@ public class ModBlocks {
 	    OxidizableBlocksRegistry.registerOxidizableBlockPair(STEEL_BLOCK, EXPOSED_STEEL);
 	    OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_STEEL, WEATHERED_STEEL);
 	    OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_STEEL, RUSTED_STEEL);
+	    
+	    OxidizableBlocksRegistry.registerWaxableBlockPair(STEEL_BLOCK, WAXED_STEEL_BLOCK);
+	    OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_STEEL, WAXED_EXPOSED_STEEL);
+	    OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_STEEL, WAXED_WEATHERED_STEEL);
+	    OxidizableBlocksRegistry.registerWaxableBlockPair(RUSTED_STEEL, WAXED_RUSTED_STEEL);
 	    
 	    Horseymod.LOGGER.info("Registering Horseymod Stripped Log Pairs");
 	    StrippableBlockRegistry.register(WILLOW_LOG, STRIPPED_WILLOW_LOG);
