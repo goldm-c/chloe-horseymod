@@ -1,7 +1,8 @@
 package com.horseymod.item;
 
 import com.horseymod.Horseymod;
-
+import com.horseymod.entity.ModBoats;
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
@@ -16,6 +17,9 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 	public static final Item WOODCHIPS = registerItem("woodchips", new Item(new Item.Settings()
 			.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Horseymod.MOD_ID, "woodchips")))));
+	
+	public static final Item WILLOW_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.WILLOW, false);
+	public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.WILLOW, true);
 	
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registries.ITEM, Identifier.of(Horseymod.MOD_ID, name), item);

@@ -12,6 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ButtonBlock;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
@@ -23,6 +24,7 @@ import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.TallFlowerBlock;
+import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
@@ -110,6 +112,17 @@ public class ModBlocks {
             		.mapColor(WILLOW_PLANKS.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(0.5F)
         			.burnable().pistonBehavior(PistonBehavior.DESTROY)));
     
+    public static final Block WILLOW_TRAPDOOR = registerBlock(
+    		"willow_trapdoor", new TrapdoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create()
+    				.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_trapdoor"))).mapColor(MapColor.STONE_GRAY)
+    				.instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
+    public static final Block WILLOW_DOOR = registerBlock(
+    		"willow_door", new DoorBlock(BlockSetType.ACACIA,
+    		AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_door")))
+    		.mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque()
+    		.burnable().pistonBehavior(PistonBehavior.DESTROY))
+    	);
+    
 	public static final Block BIG_FLOWER_POT = registerBlock("big_flower_pot", 
 			new Block(AbstractBlock.Settings.create()
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_planks")))
@@ -161,8 +174,10 @@ public class ModBlocks {
 			entries.add(STRIPPED_WILLOW_LOG);
 			entries.add(STRIPPED_WILLOW_WOOD);
 			entries.add(WILLOW_PLANKS);
-			entries.add(WILLOW_SLAB);
 			entries.add(WILLOW_STAIRS);
+			entries.add(WILLOW_SLAB);
+			entries.add(WILLOW_DOOR);
+			entries.add(WILLOW_TRAPDOOR);
 			entries.add(WILLOW_FENCE);
 			entries.add(WILLOW_FENCE_GATE);
 			entries.add(WILLOW_BUTTON);
@@ -191,6 +206,8 @@ public class ModBlocks {
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_SLAB, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_STAIRS, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_FENCE, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_DOOR, 5, 5);
+	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_TRAPDOOR, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_FENCE_GATE, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_BUTTON, 5, 5);
 	    FlammableBlockRegistry.getDefaultInstance().add(WILLOW_PRESSURE_PLATE, 5, 5);
