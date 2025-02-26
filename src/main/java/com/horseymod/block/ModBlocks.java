@@ -15,6 +15,7 @@ import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.OxidizableBlock;
@@ -114,6 +115,9 @@ public class ModBlocks {
 	public static final SaplingBlock WILLOW_SAPLING = registerBlock("willow_sapling",
 			new SaplingBlock(ModSaplingGenerators.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
 				.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_sapling")))));
+	public static final Block POTTED_WILLOW_SAPLING = registerBlock("potted_willow_sapling",
+			new FlowerPotBlock(ModBlocks.WILLOW_SAPLING,AbstractBlock.Settings
+				.copy(Blocks.POTTED_ACACIA_SAPLING).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "potted_willow_sapling")))));
 	
 	public static final Block WILLOW_STAIRS = registerBlock("willow_stairs",
             new StairsBlock(ModBlocks.WILLOW_PLANKS.getDefaultState(),

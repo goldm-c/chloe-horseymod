@@ -17,6 +17,16 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 	public static final Item WOODCHIPS = registerItem("woodchips", new Item(new Item.Settings()
 			.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Horseymod.MOD_ID, "woodchips")))));
+
+	public static final Item FRIED_EGG = registerItem("fried_egg", new Item(new Item.Settings()
+			.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Horseymod.MOD_ID, "fried_egg")))
+			.food(ModFood.FRIED_EGG)));
+	public static final Item CHERRY = registerItem("cherry", new Item(new Item.Settings()
+			.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Horseymod.MOD_ID, "cherry")))
+			.food(ModFood.CHERRY)));
+	public static final Item GOLDEN_CHERRY = registerItem("golden_cherry", new Item(new Item.Settings()
+			.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Horseymod.MOD_ID, "golden_cherry")))
+			.food(ModFood.GOLDEN_CHERRY, ModFood.GOLDEN_CHERRY_c)));
 	
 	public static final Item WILLOW_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.WILLOW, false);
 	public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.WILLOW, true);
@@ -35,8 +45,14 @@ public class ModItems {
 			entries.add(WILLOW_BOAT);
 			entries.add(WILLOW_CHEST_BOAT);
 		});	
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+			entries.add(FRIED_EGG);
+			entries.add(CHERRY);
+			entries.add(GOLDEN_CHERRY);
+		});
 		
 		CompostingChanceRegistry.INSTANCE.add(ModItems.WOODCHIPS, 0.3f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.CHERRY, 0.6f);
 		
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.WOODCHIPS, 100);
