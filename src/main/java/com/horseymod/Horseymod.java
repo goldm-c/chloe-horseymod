@@ -1,13 +1,17 @@
 package com.horseymod;
 
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.horseymod.block.ModBlocks;
 import com.horseymod.item.ModItems;
+import com.horseymod.item.ModPotions;
+
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 
 public class Horseymod implements ModInitializer {
 	public static final String MOD_ID = "horseymod";
@@ -26,12 +30,17 @@ public class Horseymod implements ModInitializer {
 		LOGGER.info("NEIGH!");
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModPotions.registerPotions();
 		
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModBlocks.CATTAILS, 100); 
 			});
 		
-		
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.HONEYCOMB, ModPotions.HASTE);
+			builder.registerPotionRecipe(ModPotions.HASTE, Items.GLOWSTONE_DUST, ModPotions.STRONG_HASTE);
+			builder.registerPotionRecipe(ModPotions.HASTE, Items.REDSTONE, ModPotions.LONG_HASTE);
+		});
 
 	}
 }

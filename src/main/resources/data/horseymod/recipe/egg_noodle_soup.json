@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:dried_kelp",
+    "minecraft:bamboo",
+    "horseymod:fried_egg",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "count": 1,
+    "id": "horseymod:egg_noodle_soup"
+  }
+}

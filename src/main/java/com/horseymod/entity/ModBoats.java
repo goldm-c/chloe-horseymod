@@ -1,6 +1,7 @@
 package com.horseymod.entity;
 
 import com.horseymod.Horseymod;
+
 import net.minecraft.util.Identifier;
 
 public class ModBoats {

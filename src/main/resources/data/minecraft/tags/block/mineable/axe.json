@@ -14,6 +14,8 @@
 		"horseymod:willow_fence",
 		"horseymod:willow_fence_gate",
 		"horseymod:willow_button",
-		"horseymod:willow_pressure_plate"
+		"horseymod:willow_pressure_plate",
+		"horseymod:willow_sign",
+		"horseymod:willow_hanging_sign"
 	]
 }

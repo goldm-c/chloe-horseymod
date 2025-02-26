@@ -2,7 +2,10 @@ package com.horseymod.block;
 
 import com.horseymod.Horseymod;
 import com.horseymod.world.ModSaplingGenerators;
-
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -18,18 +21,18 @@ import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.block.OxidizableBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
-import net.minecraft.block.TallFlowerBlock;
 import net.minecraft.block.TrapdoorBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.block.Oxidizable;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -79,25 +82,28 @@ public class ModBlocks {
                     AbstractBlock.Settings.copy(AGED_BRICKS).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "aged_brick_stairs")))));
     public static final Block AGED_BRICK_SLAB = registerBlock("aged_brick_slab",
             new SlabBlock(AbstractBlock.Settings.copy(AGED_BRICKS).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "aged_brick_slab")))));
-	
+	public static final Block AGED_BRICK_WALL = registerBlock("aged_brick_wall", 
+			new WallBlock(AbstractBlock.Settings.copy(AGED_BRICKS)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "aged_brick_wall")))));
+    
 	public static final Block MULCH = registerBlock("mulch", 
 			new Block(AbstractBlock.Settings.create()
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "mulch")))
 			.mapColor(MapColor.OAK_TAN).strength(0.5F).sounds(BlockSoundGroup.CROP)));
 	
-	public static final PillarBlock WILLOW_LOG = registerBlock("willow_log", 
+	public static final Block WILLOW_LOG = registerBlock("willow_log", 
 			new PillarBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_LOG)
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_log")))));
-	public static final PillarBlock STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", 
+	public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", 
 			new PillarBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_LOG)
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "stripped_willow_log")))));
-	public static final PillarBlock WILLOW_WOOD = registerBlock("willow_wood", 
+	public static final Block WILLOW_WOOD = registerBlock("willow_wood", 
 			new PillarBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_LOG)
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_wood")))));
-	public static final PillarBlock NATURAL_WILLOW_WOOD = registerBlockNoItem("natural_willow_wood", 
+	public static final Block NATURAL_WILLOW_WOOD = registerBlockNoItem("natural_willow_wood", 
 			new PillarBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_LOG)
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "natural_willow_wood")))));
-	public static final PillarBlock STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", 
+	public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", 
 			new PillarBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_LOG)
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "stripped_willow_wood")))));
 	public static final Block WILLOW_PLANKS = registerBlock("willow_planks", 
@@ -105,14 +111,14 @@ public class ModBlocks {
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_planks")))
 			.mapColor(MapColor.STONE_GRAY)));
 
-	public static final LeavesBlock WILLOW_LEAVES = registerBlock("willow_leaves",
+	public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_leaves")))));
-	public static final LeavesBlock WILLOW_VINES = registerBlock("willow_vines",
+	public static final Block WILLOW_VINES = registerBlock("willow_vines",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_vines")))
             .noCollision()));
-	public static final SaplingBlock WILLOW_SAPLING = registerBlock("willow_sapling",
+	public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
 			new SaplingBlock(ModSaplingGenerators.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
 				.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_sapling")))));
 	public static final Block POTTED_WILLOW_SAPLING = registerBlock("potted_willow_sapling",
@@ -149,11 +155,32 @@ public class ModBlocks {
     		.burnable().pistonBehavior(PistonBehavior.DESTROY))
     	);
     
+    public static final Identifier WILLOW_SIGN_TEXTURE = Identifier.of(Horseymod.MOD_ID, "entity/signs/willow");
+    public static final Identifier WILLOW_HANGING_SIGN_TEXTURE = Identifier.of(Horseymod.MOD_ID, "entity/signs/hanging/willow");
+    public static final Identifier WILLOW_HANGING_SIGN_GUI_TEXTURE = Identifier.of(Horseymod.MOD_ID, "textures/gui/hanging_signs/willow");
+    
+	public static final Block WILLOW_SIGN = registerBlockNoItem(
+			"willow_sign", new TerraformSignBlock(WILLOW_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
+			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_sign"))).mapColor(MapColor.STONE_GRAY)));
+	public static final Block WILLOW_WALL_SIGN = registerBlockNoItem(
+			"willow_wall_sign", new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
+					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_wall_sign")))
+					.mapColor(MapColor.STONE_GRAY).lootTable(WILLOW_SIGN.getLootTableKey())));
+	public static final Block WILLOW_HANGING_SIGN = registerBlockNoItem(
+			"willow_hanging_sign", new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, 
+					AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
+					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_hanging_sign"))).mapColor(MapColor.STONE_GRAY)));
+	public static final Block WILLOW_WALL_HANGING_SIGN = registerBlockNoItem(		
+			"willow_wall_hanging_sign", new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, 
+					AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
+					.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_wall_hanging_sign")))
+					.mapColor(MapColor.STONE_GRAY).lootTable(WILLOW_HANGING_SIGN.getLootTableKey())));
+    
 	public static final Block BIG_FLOWER_POT = registerBlock("big_flower_pot", 
 			new Block(AbstractBlock.Settings.create()
 			.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Horseymod.MOD_ID, "willow_planks")))
 			.mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.DECORATED_POT).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.25F, 4.2F)));
-	public static final TallFlowerBlock CATTAILS = registerBlock(
+	public static final Block CATTAILS = registerBlock(
 			"cattails",
 			new TallWaterFlowerBlock(
 			AbstractBlock.Settings.create()
@@ -165,24 +192,8 @@ public class ModBlocks {
 		registerBlockItem(name, block);
 		return Registry.register(Registries.BLOCK, Identifier.of(Horseymod.MOD_ID, name), block);
 	}
-	private static PillarBlock registerBlock(String name, PillarBlock block) {
-		registerBlockItem(name, block);
-		return Registry.register(Registries.BLOCK, Identifier.of(Horseymod.MOD_ID, name), block);
-	}
-	private static LeavesBlock registerBlock(String name, LeavesBlock block) {
-		registerBlockItem(name, block);
-		return Registry.register(Registries.BLOCK, Identifier.of(Horseymod.MOD_ID, name), block);
-	}
-	private static SaplingBlock registerBlock(String name, SaplingBlock block) {
-		registerBlockItem(name, block);
-		return Registry.register(Registries.BLOCK, Identifier.of(Horseymod.MOD_ID, name), block);
-	}
-	private static TallWaterFlowerBlock registerBlock(String name, TallWaterFlowerBlock block) {
-		registerBlockItem(name, block);
-		return Registry.register(Registries.BLOCK, Identifier.of(Horseymod.MOD_ID, name), block);
-	}
 	
-	private static PillarBlock registerBlockNoItem(String name, PillarBlock block) {
+	private static Block registerBlockNoItem(String name, Block block) {
 		return Registry.register(Registries.BLOCK, Identifier.of(Horseymod.MOD_ID, name), block);
 	}
 	private static void registerBlockItem(String name, Block block) {
@@ -211,6 +222,7 @@ public class ModBlocks {
 			entries.add(AGED_BRICKS);
 			entries.add(AGED_BRICK_STAIRS);
 			entries.add(AGED_BRICK_SLAB);
+			entries.add(AGED_BRICK_WALL);
 			entries.add(BIG_FLOWER_POT);
 			entries.add(STEEL_BLOCK);
 			entries.add(EXPOSED_STEEL);

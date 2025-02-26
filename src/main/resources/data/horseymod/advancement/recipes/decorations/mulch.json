@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_woodchips": {
+      "conditions": {
+        "items": [
+          {
+            "items": "horseymod:woodchips"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "horseymod:mulch"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_woodchips"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "horseymod:mulch"
+    ]
+  }
+}

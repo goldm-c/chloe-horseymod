@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "horseymod:aged_bricks",
+  "result": {
+    "count": 1,
+    "id": "horseymod:aged_brick_stairs"
+  }
+}

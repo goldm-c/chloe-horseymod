@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "horseymod:item/egg_noodle_soup"
+  }
+}
